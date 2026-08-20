@@ -157,7 +157,7 @@
       setStatus('✅ عکس‌ها با موفقیت ارسال شدند!', 'success');
     } catch (err) {
       console.error(err);
-      setStatus('❌ خطا در ارسال. دوباره امتحان کن.', 'error');
+      setStatus('❌ خطا در ارسال. اینترنتت رو چک کن یا فیلترشکن روشن کن.', 'error');
     } finally {
       isSending = false;
       setButtonsDisabled(false);
