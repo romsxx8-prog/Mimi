@@ -101,13 +101,6 @@ const MediaData = (() => {
       date: '1405/05/28',
       duration: '02:15',
       src: './assets/audio/یاسین 3.m4a'
-    },
-    {
-      id: 'a4',
-      title: 'متن عذرخواهی',
-      date: '1405/05/29',
-      duration: '04:48',
-      src: './assets/audio/متن عذرخواهی.m4a'
     }
   ];
 
