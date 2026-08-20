@@ -1,0 +1,140 @@
+/* ===== Responsive - Mobile First ===== */
+
+/* Small phones 360-390 */
+@media (max-width: 380px) {
+  .logo {
+    font-size: 2.6rem;
+  }
+  .cat-grid {
+    gap: 10px;
+  }
+  .cat-card {
+    padding: 18px 10px;
+    min-height: 110px;
+  }
+  .video-grid,
+  .photo-grid {
+    gap: 8px;
+  }
+}
+
+/* Phones up to 480 */
+@media (min-width: 400px) {
+  .sections-wrap {
+    padding: 14px 18px 24px;
+  }
+}
+
+/* Larger phones / small tablets */
+@media (min-width: 480px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets */
+@media (min-width: 640px) {
+  .cat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .cat-card {
+    min-height: 130px;
+  }
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sections-wrap {
+    max-width: 680px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .lock-btn {
+    top: 24px;
+    left: 24px;
+    width: 50px;
+    height: 50px;
+  }
+  .lock-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  .send-photo-btn {
+    top: 24px;
+    right: 24px;
+    font-size: 0.88rem;
+    padding: 11px 16px;
+  }
+  .main-content {
+    padding: 40px;
+  }
+  .modal {
+    max-width: 360px;
+  }
+  .sections-wrap {
+    max-width: 780px;
+    padding: 20px 24px 40px;
+  }
+  .priv-header {
+    padding: 24px 24px 16px;
+  }
+  .back-btn {
+    top: 24px;
+    right: 24px;
+  }
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .bottom-nav {
+    max-width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0;
+    border-left: 1px solid var(--priv-border);
+    border-right: 1px solid var(--priv-border);
+  }
+  body.private-page {
+    padding-bottom: calc(var(--nav-height) + 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sections-wrap {
+    max-width: 900px;
+  }
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .cat-grid {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,65 @@
+/* ===== Shared Animations ===== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes unlockGlow {
+  0% { box-shadow: 0 0 0 0 rgba(255, 180, 200, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(255, 180, 200, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 180, 200, 0); }
+}
+
+.lock-btn.unlocking {
+  animation: unlockGlow 0.6s ease;
+}
+
+/* Stagger children */
+.stagger > * {
+  opacity: 0;
+  animation: fadeUp 0.45s ease forwards;
+}
+
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.12s; }
+.stagger > *:nth-child(3) { animation-delay: 0.19s; }
+.stagger > *:nth-child(4) { animation-delay: 0.26s; }
+.stagger > *:nth-child(5) { animation-delay: 0.33s; }
+.stagger > *:nth-child(6) { animation-delay: 0.40s; }
+.stagger > *:nth-child(7) { animation-delay: 0.47s; }
+.stagger > *:nth-child(8) { animation-delay: 0.54s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger > * {
+    animation: none;
+    opacity: 1;
+  }
+}

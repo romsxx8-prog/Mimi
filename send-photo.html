@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0a1a">
+  <meta name="description" content="ارسال عکس — Mimi">
+  <title>ارسال عکس · Mimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/send-photo.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body class="send-photo-page">
+  <div class="send-bg" aria-hidden="true"></div>
+
+  <a href="./index.html" class="sp-back" aria-label="برگشت به صفحه اصلی">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M9 18l6-6-6-6"/>
+    </svg>
+    برگشت
+  </a>
+
+  <!-- محتوا مستقیم نمایش داده می‌شه (دیگه گیت پسورد نداره) -->
+  <main class="sp-card" id="spContent">
+    <div class="sp-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <path d="M21 15l-5-5L5 21"/>
+      </svg>
+    </div>
+
+    <h1 class="sp-title">ارسال عکس برای خوشحالی همسرم</h1>
+    <p class="sp-subtitle">کاملا اختیاریه قندعشلمم ولی اگه خواستی خوشحالم بکنی بزن رو گزینه های پایینی😉😍💋</p>
+
+    <div class="sp-buttons">
+      <button type="button" id="uploadBtn" class="sp-btn sp-btn-primary" aria-label="آپلود عکس از گالری">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        آپلود عکس
+      </button>
+
+      <button type="button" id="cameraBtn" class="sp-btn sp-btn-secondary" aria-label="گرفتن عکس با دوربین">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+        دوربین
+      </button>
+    </div>
+
+    <input type="file" id="fileInput" accept="image/*" multiple hidden>
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+
+    <div id="status" class="sp-status" role="status" aria-live="polite"></div>
+    <div id="spinner" class="sp-spinner" hidden aria-hidden="true"></div>
+  </main>
+
+  <script src="./js/send-photo.js"></script>
+</body>
+</html>

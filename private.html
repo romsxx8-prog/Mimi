@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e0a18">
+  <meta name="description" content="اتاق خصوصی — Mimi">
+  <title>اتاق خصوصی · Mimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/private.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body class="private-page">
+  <div class="private-bg" aria-hidden="true"></div>
+
+  <header class="priv-header">
+    <button class="back-btn" id="backBtn" type="button" aria-label="برگشت به صفحه اصلی">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+      برگشت
+    </button>
+    <h1 class="priv-title">اتاق شخصی خودت</h1>
+    <p class="priv-subtitle">اینجا هرچیزی که ببینی راجب شوهرته پس عشقشو ببر🥳🥳🥳</p>
+  </header>
+
+  <div class="sections-wrap">
+    <!-- Home / Categories -->
+    <section class="section active" id="section-home" aria-label="صفحه اصلی خصوصی">
+      <div class="cat-grid stagger">
+        <button class="cat-card" data-section="videos" type="button">
+          <div class="cat-icon videos" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+          </div>
+          <span class="cat-label">ویدیوها</span>
+          <span class="cat-count">—</span>
+        </button>
+        <button class="cat-card" data-section="photos" type="button">
+          <div class="cat-icon photos" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
+          <span class="cat-label">عکس‌ها</span>
+          <span class="cat-count">—</span>
+        </button>
+        <button class="cat-card" data-section="voices" type="button">
+          <div class="cat-icon voices" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <span class="cat-label">ویس‌ها</span>
+          <span class="cat-count">—</span>
+        </button>
+        <button class="cat-card" data-section="texts" type="button">
+          <div class="cat-icon texts" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+          </div>
+          <span class="cat-label">نوشته‌ها</span>
+          <span class="cat-count">—</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="section" id="section-videos" aria-label="ویدیوها">
+      <div class="media-header">
+        <h2 class="media-title">ویدیوها</h2>
+        <span class="media-count" id="videoCount"></span>
+      </div>
+      <div class="video-grid" id="videoGrid"></div>
+    </section>
+
+    <!-- Photos -->
+    <section class="section" id="section-photos" aria-label="عکس‌ها">
+      <div class="media-header">
+        <h2 class="media-title">عکس‌ها</h2>
+        <span class="media-count" id="photoCount"></span>
+      </div>
+      <div class="photo-grid" id="photoGrid"></div>
+    </section>
+
+    <!-- Voices -->
+    <section class="section" id="section-voices" aria-label="ویس‌ها">
+      <div class="media-header">
+        <h2 class="media-title">ویس‌ها</h2>
+        <span class="media-count" id="voiceCount"></span>
+      </div>
+      <div class="voice-list" id="voiceList"></div>
+    </section>
+
+    <!-- Texts -->
+    <section class="section" id="section-texts" aria-label="نوشته‌ها">
+      <div class="media-header">
+        <h2 class="media-title">نوشته‌ها</h2>
+        <span class="media-count" id="textCount"></span>
+      </div>
+      <div class="text-list" id="textList"></div>
+    </section>
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav" aria-label="منوی بخش‌ها">
+    <button class="nav-item active" data-section="home" type="button" aria-label="خانه">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>خانه</span>
+    </button>
+    <button class="nav-item" data-section="videos" type="button" aria-label="ویدیوها">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      <span>ویدیو</span>
+    </button>
+    <button class="nav-item" data-section="photos" type="button" aria-label="عکس‌ها">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      <span>عکس</span>
+    </button>
+    <button class="nav-item" data-section="voices" type="button" aria-label="ویس‌ها">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+      <span>ویس</span>
+    </button>
+    <button class="nav-item" data-section="texts" type="button" aria-label="نوشته‌ها">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>نوشته</span>
+    </button>
+  </nav>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش عکس">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="بستن">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="عکس قبلی">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="عکس بعدی">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="lightbox-img-wrap">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="پخش ویدیو">
+    <button class="video-modal-close" id="videoModalClose" type="button" aria-label="بستن">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="video-player-wrap">
+      <video id="videoPlayer" controls playsinline preload="metadata"></video>
+      <p class="video-modal-title" id="videoModalTitle"></p>
+    </div>
+  </div>
+
+  <!-- Text Reading Modal -->
+  <div class="text-modal" id="textModal" role="dialog" aria-modal="true" aria-label="خواندن نوشته">
+    <div class="text-modal-sheet">
+      <div class="text-modal-handle" aria-hidden="true"></div>
+      <h2 class="text-modal-title" id="textModalTitle"></h2>
+      <p class="text-modal-date" id="textModalDate"></p>
+      <div class="text-modal-body" id="textModalBody"></div>
+      <button class="text-modal-close-btn" id="textModalClose" type="button">بستن</button>
+    </div>
+  </div>
+
+  <script src="./js/storage.js"></script>
+  <script src="./js/media.js"></script>
+  <script src="./js/private.js"></script>
+</body>
+</html>
