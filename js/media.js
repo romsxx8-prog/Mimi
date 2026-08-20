@@ -77,7 +77,56 @@ const MediaData = (() => {
       date: '1405/05/28',
       src: './assets/images/IMG_20260819_151022.jpg',
     
-    }
+    },
+    {
+      id: 'p6',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/1.jpg',
+      
+    },
+    {
+      id: 'p7',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/2.jpg',
+      
+    },
+    {
+      id: 'p8',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/3.jpg',
+      
+    },
+    {
+      id: 'p9',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/4.jpg',
+      
+    },
+    {
+      id: 'p10',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/5.jpg',
+      
+    },
+    {
+      id: 'p11',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/6.jpg',
+      
+    },
+    {
+      id: 'p12',
+      title: 'همین الان یهویی😂',
+      date: '1405/05/29',
+      src: './assets/images/7.jpg',
+      
+    },
   ];
 
   const voices = [
