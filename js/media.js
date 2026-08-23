@@ -127,6 +127,20 @@ const MediaData = (() => {
       src: './assets/images/7.jpg',
       
     },
+    {
+      id: 'p13',
+      title: 'خیخیخی سیسو نگاه😂💖',
+      date: '1405/06/01',
+      src: './assets/images/9.jpg',
+      
+    },
+    {
+      id: 'p14',
+      title: 'دوربینم کیفیتش پایینه😭😭😭',
+      date: '1405/06/01',
+      src: './assets/images/10.jpg',
+      
+    },
   ];
 
   const voices = [
